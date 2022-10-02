@@ -34,6 +34,7 @@ while True:
             percentage_int.append(float(percentual['pvap'].replace(',', '').replace('%', '')) / 100)
 
     valid_votes = "{:,}".format(int(json_data['vv']))
+    votes_to_win = "{:,}".format(int((int(json_data['vv']) / 2) + 1))
     total_percentage = json_data['psi'] + '%'
 
     output_results = pd.DataFrame(list(zip(candidate, votes, percentage)),
@@ -44,6 +45,7 @@ while True:
     print('Diferença de votos entre Lula e Bolsonaro: ', ("{:,}".format(votes_int[0] - votes_int[1])))
     print('Diferença de porcentagem entre Lula e Bolsonaro: ',
           ("{0:.2f}".format(percentage_int[0] - percentage_int[1])) + '\n')
+    print('Votos necessários para vencer: ', votes_to_win, '\n')
     print(output_results)
     total_percentage_int = float(json_data['psi'].replace(',', '').replace('%', '')) / 100
     if total_percentage_int == 100:
