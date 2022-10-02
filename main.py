@@ -29,6 +29,6 @@ output_results = pd.DataFrame(list(zip(candidate, votes, percentage)),
 
 print('\nVotos validos apurados: ', valid_votes,
       '\nPorcentagem de urnas apuradas: ', total_percentage, '\n')
-print('Diferença  de votos entre Lula e Bolsonaro: ', ("{:,}".format(votes_int[0] - votes_int[1])))
-print('Diferença  de votos entre Lula e Bolsonaro: ', ("{0:.2f}".format(percentage_int[0] - percentage_int[1])) + '\n')
+print('Diferença de votos entre Lula e Bolsonaro: ', ("{:,}".format(votes_int[0] - votes_int[1])))
+print('Diferença de porcentagem entre Lula e Bolsonaro: ', ("{0:.2f}".format(percentage_int[0] - percentage_int[1])) + '\n')
 print(output_results)
