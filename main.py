@@ -45,5 +45,8 @@ while True:
     print('Diferença de porcentagem entre Lula e Bolsonaro: ',
           ("{0:.2f}".format(percentage_int[0] - percentage_int[1])) + '\n')
     print(output_results)
+    total_percentage_int = float(json_data['psi'].replace(',', '').replace('%', '')) / 100
+    if total_percentage_int == 100:
+        break
     print('\nPor favor espere 30 segundos ate atualizar!')
     flag = 1
