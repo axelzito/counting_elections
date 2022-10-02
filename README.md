@@ -16,6 +16,11 @@ cd project_name
 ```
 
 ```sh
+pip install pandas
+
+```
+
+```sh
 python main.py
 ```
 
