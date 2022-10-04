@@ -43,8 +43,8 @@ while True:
 
     print('\nVotos validos apurados: ', valid_votes,
           '\nPorcentagem de urnas apuradas: ', total_percentage, '\n')
-    print('Diferença de votos entre Lula e Bolsonaro: ', ("{:,}".format(votes_int[0] - votes_int[1])))
-    print('Diferença de porcentagem entre Lula e Bolsonaro: ',
+    print('Diferença de votos entre ' + candidate[0] + ' e ' + candidate[1] + ': ', ("{:,}".format(votes_int[0] - votes_int[1])))
+    print('Diferença de porcentagem entre ' + candidate[0] + ' e ' + candidate[1] + ': ',
           ("{0:.2f}".format(percentage_int[0] - percentage_int[1])) + '\n')
     print('Votos necessários para vencer: ', votes_to_win)
     print('Votos necessários para primeiro colocado vencer: ', "{:,}".format(votes_to_candidate_win), '\n')
