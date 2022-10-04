@@ -50,7 +50,7 @@ while True:
     print('Votos necessários para primeiro colocado vencer: ', "{:,}".format(votes_to_candidate_win), '\n')
     print(output_results)
     total_percentage_int = float(json_data['psi'].replace(',', '').replace('%', '')) / 100
-    if total_percentage_int == 100:
+    if total_percentage_int > 99.98:
         break
     print('\nPor favor espere 30 segundos ate atualizar!')
     flag = 1
