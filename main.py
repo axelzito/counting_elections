@@ -13,9 +13,10 @@ while True:
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print('Atualizado em: ', current_time)
+    # primeiro turno
     # data = requests.get('https://resultados.tse.jus.br/oficial/ele2022/544/dados-simplificados/br/br-c0001-e000544
     # -r.json')
-
+    # segundo turno
     data = requests.get('https://resultados.tse.jus.br/oficial/ele2022/545/dados-simplificados/br/br-c0001-e000545-r'
                         '.json')
     json_data = json.loads(data.content)
@@ -49,8 +50,8 @@ while True:
     print('Diferença de votos entre ' + candidate[0] + ' e ' + candidate[1] + ': ', ("{:,}".format(votes_int[0] - votes_int[1])))
     print('Diferença de porcentagem entre ' + candidate[0] + ' e ' + candidate[1] + ': ',
           ("{0:.2f}".format(percentage_int[0] - percentage_int[1])) + '\n')
-    print('Votos necessários para vencer: ', votes_to_win)
-    print('Votos necessários para primeiro colocado vencer: ', "{:,}".format(votes_to_candidate_win), '\n')
+    # print('Votos necessários para vencer: ', votes_to_win)
+    # print('Votos necessários para primeiro colocado vencer: ', "{:,}".format(votes_to_candidate_win), '\n')
     print(output_results)
     total_percentage_int = float(json_data['psi'].replace(',', '').replace('%', '')) / 100
     if total_percentage_int > 99.98:
